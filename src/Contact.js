@@ -1,24 +1,7 @@
 import React from "react";
-import slide1 from "./images/slide1.jpg";
-import slide2 from "./images/slide2.jpg";
-import { Fade } from "react-slideshow-image";
 function Contact() {
-    const images = [slide1, slide2];
-
     return (
         <div>
-            <Fade>
-                {images.map((each, index) => (
-                    <div className="w-full h-96 overflow-hidden">
-                        <img
-                            key={index}
-                            alt={`asdfasdfds${index}`}
-                            style={{ width: "100%" }}
-                            src={each}
-                        />
-                    </div>
-                ))}
-            </Fade>
             <div class="grid grid-cols-1 lg:grid-cols-2">
                 <div class="">
                     <h1 class="text-4xl text-center italic py-5 font-bold">
@@ -67,14 +50,13 @@ function Contact() {
                         </div>
                     </div>
                 </div>
-                <div class="bg-yellow-200 p-5">
-                    <p class="text-4xl capitalize py-3">office</p>
-                    <p class="text-2xl capitalize py-3">phone</p>
-                    <p class="text-2xl capitalize py-3">email</p>
-                    <p class="text-2xl capitalize py-3">location</p>
-                    <p class="text-xl capitalize py-3">something</p>
-                    <p class="text-xl capitalize py-3">something</p>
-                    <p class="text-xl capitalize py-3">something</p>
+                <div class="bg-yellow-200 p-5 flex flex-col justify-center items-center">
+                    <p class="text-xl capitalize px-3">
+                        Ramesh Nagar New Delhi 110015
+                    </p>
+                    <p class="text-xl capitalize px-3">
+                        nutritionistbinny@gmail.com
+                    </p>
                 </div>
             </div>
         </div>

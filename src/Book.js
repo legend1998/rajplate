@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-
+import { firestore } from "./firebaseconfig";
 function Book() {
     const [book, setbook] = useState({});
     let nameref = useRef();
@@ -10,13 +10,53 @@ function Book() {
     let mediStatus = useRef();
     let ff = useRef();
     let fod = useRef();
+
+    const savebooking = (e) => {
+        e.preventDefault();
+        if (nameref.current.value.length < 3) {
+            return alert("need name");
+        } else if (email.current.value.length < 4) {
+            return alert("need email");
+        } else if (weight.current.value === "") {
+            return alert("need weight");
+        } else if (age.current.value === "") {
+            return alert("need age");
+        } else if (height.current.value === "") {
+            return alert("need height");
+        } else if (mediStatus.current.value === "") {
+            return alert("need medical status");
+        } else {
+            setbook({
+                ...book,
+                name: nameref.current.value,
+                email: email.current.value,
+                weight: weight.current.value,
+                age: age.current.value,
+                height: height.current.value,
+                mediStatus: mediStatus.current.value,
+            });
+
+            firestore
+                .collection("bookings")
+                .add(book)
+                .then((res) => {
+                    alert("your booking is submitted successfully");
+                })
+                .catch((e) => {
+                    alert(e.messge);
+                });
+        }
+    };
     return (
-        <div className="p-5 flex flex-col  justify-center items-center">
+        <div className="p-5 flex flex-col  justify-center items-center capitalize">
             <p className="text-3xl font-semibold text-center py-10">
                 Book Your Diet Plan
             </p>
 
-            <form className="lg:w-2/3 border shadow-lg p-3 rounded">
+            <form
+                onSubmit={(e) => savebooking(e)}
+                className="lg:w-2/3 border shadow-lg p-3 rounded"
+            >
                 <p className="px-2">
                     name <span className="text-red-600">*</span>
                 </p>
@@ -24,7 +64,7 @@ function Book() {
                     ref={nameref}
                     type="text"
                     placeholder="name"
-                    className="h-12 border rounded  appearance-none px-2 py-1 w-72 m-2"
+                    className="h-12 border rounded w-full appearance-none px-2 py-1 lg:w-72 m-2"
                 />
                 <p className="px-2">
                     email <span className="text-red-600">*</span>
@@ -34,7 +74,7 @@ function Book() {
                     ref={email}
                     type="text"
                     placeholder="email"
-                    className="h-12 border rounded  appearance-none px-2 py-1 w-72 m-2"
+                    className="h-12 border rounded w-full appearance-none px-2 py-1 lg:w-72 m-2"
                 />
                 <div className="py-4 px-2">
                     <p className="">Gender</p>
@@ -55,25 +95,25 @@ function Book() {
                     type="text"
                     ref={weight}
                     placeholder="weight"
-                    className="h-12 border rounded  appearance-none px-2 py-1 w-72 m-2"
+                    className="h-12 border rounded w-full appearance-none px-2 py-1 lg:w-72 m-2"
                 />
                 <input
                     type="text"
                     ref={age}
                     placeholder="age"
-                    className="h-12 border rounded  appearance-none px-2 py-1 w-72 m-2"
+                    className="h-12 border rounded w-full appearance-none px-2 py-1 lg:w-72 m-2"
                 />
                 <input
                     type="text"
                     ref={height}
                     placeholder="height "
-                    className="h-12 border rounded  appearance-none px-2 py-1 w-72 m-2"
+                    className="h-12 border rounded w-full appearance-none px-2 py-1 lg:w-72 m-2"
                 />
                 <input
                     type="text"
                     ref={mediStatus}
                     placeholder="currentlly on any medication "
-                    className="h-12 border rounded  appearance-none px-2 py-1 w-72 m-2"
+                    className="h-12 border rounded w-full appearance-none px-2 py-1 lg:w-72 m-2"
                 />
                 <div className="p-2">
                     <p className=" font-semibold">
@@ -449,7 +489,7 @@ function Book() {
                     type="text"
                     ref={ff}
                     placeholder="Favourite food"
-                    className="h-12 border rounded  appearance-none px-2 py-1 w-72 m-2"
+                    className="h-12 border rounded w-full appearance-none px-2 py-1 lg:w-72 m-2"
                 />
                 <p className="font-semibold">
                     Food you would hate to eat on diet plan
@@ -459,11 +499,14 @@ function Book() {
                     type="text"
                     ref={fod}
                     placeholder="name a food"
-                    className="h-12 border rounded  appearance-none px-2 py-1 w-72 m-2"
+                    className="h-12 border rounded w-full appearance-none px-2 py-1 lg:w-72 m-2"
                 />
                 <br />
                 <div className="text-center">
-                    <button className="h-12 w-44 bg-blue-600 text-white ">
+                    <button
+                        type="submit"
+                        className="h-12 w-44 mt-10 bg-blue-600 text-white "
+                    >
                         Apply
                     </button>
                 </div>

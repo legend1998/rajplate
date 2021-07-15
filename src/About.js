@@ -1,24 +1,9 @@
 import React from "react";
-import slide1 from "./images/slide1.jpg";
-import slide2 from "./images/slide2.jpg";
-import { Fade } from "react-slideshow-image";
+import about from "./images/about.jpeg";
 function About() {
-    const images = [slide1, slide2];
     return (
         <div>
-            <Fade>
-                {images.map((each, index) => (
-                    <div className="w-full h-96 overflow-hidden">
-                        <img
-                            key={index}
-                            alt={`asdfasdfds${index}`}
-                            style={{ width: "100%" }}
-                            src={each}
-                        />
-                    </div>
-                ))}
-            </Fade>
-            <div class="m-4 border rounded">
+            <div class="m-4      rounded">
                 <div class="grid lg:grid-cols-2 grid-cols-1">
                     <div class="">
                         <div
@@ -27,27 +12,41 @@ function About() {
                     flex
                     justify-center
                     items-center
-                    bg-blue-300
+                    
                 "
                         >
-                            image
+                            <img src={about} alt="sdf" width="310px" />
                         </div>
-                        <img src="" alt="" />
                     </div>
-                    <div class="p-5">
+                    <div class="p-5 flex items-center">
                         <p class="">
-                            Hi! I’m Binny Choudhry, your plate manager.​ ​ I’m
-                            here to help you find your most optimal diet
-                            solutions to allow you to enjoy your life with the
-                            food that helps you achieve your body goals.​ ​
-                            Instead of just focusing on “losing weight”, I aim
-                            to help you improve your overall health and wellness
-                            by focusing on fitness and lifestyle improvement.​
+                            Hi! I’m{" "}
+                            <span className="font-semibold">
+                                Binny Choudhry
+                            </span>
+                            , your plate manager.​ ​ I’m here to help you find
+                            your most optimal diet solutions to allow you to
+                            enjoy your life with the food that helps you achieve
+                            your body goals.​ ​ Instead of just focusing on
+                            “losing weight”, I aim to help you improve your
+                            overall health and wellness by focusing on fitness
+                            and lifestyle improvement.​ <br />
+                            <br />
+                            Nutritionist Binny Choudhry (My Plate Manager)
+                            offers variety of health and wellness programs by
+                            focusing on fitness and lifestyle improvement. Her
+                            holistic approach towards nutrition, weight and
+                            health management is highly result oriented. We
+                            certainly consider your food preferences, medical/
+                            health conditions and your day to day routine, while
+                            customizing your program that exactly fits into your
+                            lifestyle. Specialist and running her clinic in
+                            Delhi , serving all over the globe
                         </p>
                     </div>
                 </div>
-                <div class="grid lg:grid-cols-2 grid-cols-1">
-                    <div class="p-5">
+                <div class="grid lg:grid-cols-2 grid-cols-1 my-10">
+                    <div class="p-5 flex items-center">
                         <p class="">
                             For so long we have been taught to peruse diet with
                             an aim to lose weight at all cost. It has become an
@@ -66,22 +65,25 @@ function About() {
                             life. ​
                         </p>
                     </div>
-                    <div class="">
+                    <div class=" flex justify-center">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR239O3BEwHcvFMNlfs0L6t8fosReXAH9oBeQ&usqp=CAU"
+                            alt=""
+                            className=""
+                            width="330px"
+                        />
                         <div
                             class="
                     h-full
-                    flex
+                    flex    
                     justify-center
                     items-center
-                    bg-blue-300
+
                 "
-                        >
-                            image
-                        </div>
-                        <img src="" alt="" />
+                        ></div>
                     </div>
                 </div>
-                <div class="grid lg:grid-cols-2 grid-cols-1">
+                <div class="grid lg:grid-cols-2 grid-cols-1 my-10 ">
                     <div class="">
                         <div
                             class="
@@ -92,11 +94,15 @@ function About() {
                     bg-blue-300
                 "
                         >
-                            image
+                            <img
+                                src="https://www.beachyogagirl.com/wp-content/uploads/2020/04/memberships-min-1.jpg"
+                                alt=""
+                                className="rounded shadow-lg"
+                            />
                         </div>
                         <img src="" alt="" />
                     </div>
-                    <div class="p-5">
+                    <div class="p-5 flex items-center">
                         <p class="">
                             I started My Plate Manager in 2016 while I was
                             working as a Trainee Nutritionist at FitBites. It
@@ -115,7 +121,7 @@ function About() {
                     </div>
                 </div>
                 <div class="grid lg:grid-cols-2 grid-cols-1">
-                    <div class="p-5">
+                    <div class="p-5 flex items-center">
                         <p class="">
                             2016-18 – Trainee Nutritionist at FitBites​ ​ 2016 –
                             Founded My Plate Manager​ ​ 2017 – YMCA ​ ​ ​
@@ -128,10 +134,14 @@ function About() {
                     flex
                     justify-center
                     items-center
-                    bg-blue-300
+
                 "
                         >
-                            image
+                            <img
+                                src="https://yogisbazaar.com/wp-content/uploads/2021/02/Untitled-1fkg.jpg"
+                                alt=""
+                                className="rounded-lg shadow-lg"
+                            />
                         </div>
                         <img src="" alt="" />
                     </div>

@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
-import slide1 from "./images/slide1.jpg";
-import slide2 from "./images/slide2.jpg";
-import { Fade } from "react-slideshow-image";
 import { firestore } from "./firebaseconfig";
 function Recipies() {
-    const images = [slide1, slide2];
-
     const [data, setdata] = useState(null);
     const [recipie, setrecipie] = useState(null);
 
@@ -24,18 +19,6 @@ function Recipies() {
 
     return (
         <div>
-            <Fade>
-                {images.map((each, index) => (
-                    <div className="w-full h-96 overflow-hidden">
-                        <img
-                            key={index}
-                            alt={`asdfasdfds${index}`}
-                            style={{ width: "100%" }}
-                            src={each}
-                        />
-                    </div>
-                ))}
-            </Fade>
             <div className="p-5 shadow-lg border-2 m-5">
                 {data?.map((r, index) => (
                     <div key={index} className="m-2 shadow-lg rounded p-2">

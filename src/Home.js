@@ -34,10 +34,11 @@ function Home() {
                     </div>
                 ))}
             </Fade>
-            <div class="p-5 flex flex-wrap items-center justify-center">
+            <div class="lg:p-5 flex flex-wrap items-center justify-center text-center">
                 <div
                     class="
-                    w-72
+                    lg:w-72
+                    w-full
                     h-44
                     m-2
                     backimage
@@ -53,7 +54,8 @@ function Home() {
                 </div>
                 <div
                     class="
-                    w-72
+                    lg:w-72
+                    w-full
                     h-44
                     m-2
                     shadow-md
@@ -64,13 +66,14 @@ function Home() {
                     rounded
                 "
                 >
-                    <span class="m-2 uppercase text-3xl text-white">
+                    <span class="m-2 uppercase text-3xl text-white text-center">
                         Weight management
                     </span>
                 </div>
                 <div
                     class="
-                    w-72
+                    lg:w-72
+                    w-full
                     h-44
                     m-2
                     shadow-md
@@ -81,13 +84,14 @@ function Home() {
                     rounded
                 "
                 >
-                    <span class="m-2 uppercase text-3xl text-white">
-                        Weight management
+                    <span class="m-2 uppercase text-3xl text-white text-center">
+                        MEDIcal nutrition therapy
                     </span>
                 </div>
                 <div
                     class="
-                    w-72
+                    lg:w-72
+                    w-full
                     h-44
                     m-2
                     shadow-md
@@ -98,74 +102,8 @@ function Home() {
                     rounded
                 "
                 >
-                    <span class="m-2 uppercase text-3xl text-white">
-                        Eating disorders
-                    </span>
-                </div>
-                <div
-                    class="
-                    w-72
-                    h-44
-                    m-2
-                    shadow-md
-                    backimage
-                    flex
-                    justify-center
-                    items-center
-                    rounded
-                "
-                >
-                    <span class="m-2 uppercase text-3xl text-white">keto </span>
-                </div>
-                <div
-                    class="
-                    w-72
-                    h-44
-                    m-2
-                    shadow-md
-                    backimage
-                    flex
-                    justify-center
-                    items-center
-                    rounded
-                "
-                >
-                    <span class="m-2 uppercase text-3xl text-white">
-                        Eating disorders
-                    </span>
-                </div>
-                <div
-                    class="
-                    w-72
-                    h-44
-                    m-2
-                    shadow-md
-                    backimage
-                    flex
-                    justify-center
-                    items-center
-                    rounded
-                "
-                >
-                    <span class="m-2 uppercase text-3xl text-white">
-                        Eating disorders
-                    </span>
-                </div>
-                <div
-                    class="
-                    w-72
-                    h-44
-                    m-2
-                    shadow-md
-                    backimage
-                    flex
-                    justify-center
-                    items-center
-                    rounded
-                "
-                >
-                    <span class="m-2 uppercase text-3xl text-white">
-                        Eating disorders
+                    <span class="m-2 uppercase text-3xl text-white text-center">
+                        KETO
                     </span>
                 </div>
             </div>
@@ -176,25 +114,25 @@ function Home() {
             </div>
             {info ? (
                 <div class="flex flex-wrap justify-center items-center">
-                    <div class="shadow-lg rounded p-2 border w-72 h-44 italic m-3">
+                    <div class="shadow-lg rounded p-2 border lg:w-72 w-48 h-44 italic m-3">
                         <h1 class="text-5xl font-semibold text-center py-8">
                             <CountUp end={info?.cs} />
                         </h1>
                         <p class="text-center">clients served</p>
                     </div>
-                    <div class="shadow-lg rounded p-2 border w-72 h-44 italic m-3">
+                    <div class="shadow-lg rounded p-2 border lg:w-72 w-48  h-44 italic m-3">
                         <h1 class="text-5xl font-semibold text-center py-8">
                             <CountUp end={info?.lrr} />
                         </h1>
                         <p class="text-center">lab results read</p>
                     </div>
-                    <div class="shadow-lg rounded p-2 border w-72 h-44 italic m-3">
+                    <div class="shadow-lg rounded p-2 border lg:w-72 w-48 h-44 italic m-3">
                         <h1 class="text-5xl font-semibold text-center py-8">
                             <CountUp end={info?.pr} />
                         </h1>
                         <p class="text-center">periods repaired</p>
                     </div>
-                    <div class="shadow-lg rounded p-2 border w-72 h-44 italic m-3">
+                    <div class="shadow-lg rounded p-2 border lg:w-72 w-48 h-44 italic m-3">
                         <h1 class="text-5xl font-semibold text-center py-8">
                             {info?.coffee}
                         </h1>

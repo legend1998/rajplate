@@ -7,8 +7,8 @@ function Header() {
     const [toggled, settoggled] = useState(true);
     console.log(toggled);
 
-    const active = "px-5 text-red-400";
-    const passive = "px-5";
+    const active = "px-5 py-3 text-red-400";
+    const passive = "px-5 py-3";
     return (
         <header>
             <nav class="border-b shadow-lg lg:block hidden">
@@ -50,7 +50,6 @@ function Header() {
                     </div>
                     <div class="flex-1 flex-col text-left">
                         <div class="text-right px-10">
-                            <span class="fab fa-facebook px-2"></span>
                             <span class="fab fa-instagram px-2"></span>
                             <span class="fab fa-whatsapp px-2"></span>
                         </div>
@@ -91,16 +90,18 @@ function Header() {
             </nav>
             <nav class="border-b shadow-lg lg:hidden block">
                 <div class="flex justify-center items-center flex-col">
-                    <div class="w-64 flex justify-center">
-                        <img src={logo} alt="" width="120px" />
-                    </div>
-
-                    <div class="flex-col text-left">
-                        <div class="text-center px-10">
+                    <div className="flex justify-between  w-full items-center">
+                        <div class="px-5 flex justify-center">
+                            <img src={logo} alt="" width="120px" />
+                        </div>
+                        <div class="text-center px-5">
                             <button onClick={() => settoggled(!toggled)}>
                                 <span class="fas fa-hamburger fa-2x"></span>
                             </button>
                         </div>
+                    </div>
+
+                    <div class="flex-col text-left">
                         {toggled ? (
                             <div
                                 id="navbar"
@@ -109,10 +110,9 @@ function Header() {
                             absolute
                             left-0
                             flex-col
-                            z-10
                             flex
                             text-center
-                           
+                           z-50
                             bg-white
                             w-full
                         "

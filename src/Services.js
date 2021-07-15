@@ -1,30 +1,12 @@
 import React from "react";
-import slide1 from "./images/slide1.jpg";
-import slide2 from "./images/slide2.jpg";
-import { Fade } from "react-slideshow-image";
 function Services() {
-    const images = [slide1, slide2];
-
     return (
         <div>
-            <Fade>
-                {images.map((each, index) => (
-                    <div className="w-full h-96 overflow-hidden">
-                        <img
-                            key={index}
-                            alt={`asdfasdfds${index}`}
-                            style={{ width: "100%" }}
-                            src={each}
-                        />
-                    </div>
-                ))}
-            </Fade>
-
             <div class="flex justify-center flex-wrap">
-                <div class="p-2 m-2 shadow-md rounded border">
+                <div class="p-2 m-2 shadow-md rounded border w-full lg:w-72">
                     <div
                         class="
-                w-72
+                
                 m-2
                 shadow-md
                 backimage
@@ -47,10 +29,10 @@ function Services() {
                         <li>Diabetes management​</li>
                     </ul>
                 </div>
-                <div class="p-2 m-2 shadow-md rounded border">
+                <div class="p-2 m-2 shadow-md rounded border w-full lg:w-72">
                     <div
                         class="
-                w-72
+                
                 m-2
                 shadow-md
                 backimage
@@ -61,17 +43,17 @@ function Services() {
             "
                     >
                         <span class="m-2 h-32 uppercase text-3xl text-white">
-                            Weight management
+                            Eating Disorder
                         </span>
                     </div>
                     <ul class="list-decimal pl-8">
                         <li>TBD</li>
                     </ul>
                 </div>
-                <div class="p-2 m-2 shadow-md rounded border">
+                <div class="p-2 m-2 shadow-md rounded border w-full lg:w-72">
                     <div
                         class="
-                w-72
+               
                 m-2
                 shadow-md
                 backimage
@@ -82,17 +64,22 @@ function Services() {
             "
                     >
                         <span class="m-2 h-32 uppercase text-3xl text-white">
-                            Weight management
+                            Medical Nutrition Therapy
                         </span>
                     </div>
                     <ul class="list-decimal pl-8">
-                        <li>TBD</li>
+                        <li>Diabeties Management</li>
+                        <li>PCOS/PCOD management</li>
+                        <li> Healthy Heart Management</li>
+                        <li> Healthy gut Management</li>
+                        <li>Anemia Management </li>
+                        <li> Cholestrol Management</li>
                     </ul>
                 </div>
-                <div class="p-2 m-2 shadow-md rounded border">
+                <div class="p-2 m-2 shadow-md rounded border w-full lg:w-72">
                     <div
                         class="
-                w-72
+               
                 m-2
                 shadow-md
                 backimage
@@ -103,11 +90,15 @@ function Services() {
             "
                     >
                         <span class="m-2 h-32 uppercase text-3xl text-white">
-                            Weight management
+                            KETO
                         </span>
                     </div>
                     <ul class="list-decimal pl-8">
-                        <li>TBD</li>
+                        <li>Standard Ketogenic diet</li>
+                        <li>Cyclic Ketogenic diet</li>
+                        <li>High Protein Ketogenic diet</li>
+                        <li>Targeted Ketogenic diet</li>
+                        <li>Calarie Restricted Ketogenic diet</li>
                     </ul>
                 </div>
             </div>
