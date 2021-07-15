@@ -4,7 +4,7 @@ import logo from "./images/logo.png";
 
 function Header() {
     const location = useLocation();
-    const [toggled, settoggled] = useState(true);
+    const [toggled, settoggled] = useState(false);
     console.log(toggled);
 
     const active = "px-5 py-3 text-red-400";
