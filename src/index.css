@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.backimage {
+    background: linear-gradient(rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.63)),
+        url("./images/wer.jpg");
+    background-size: cover;
+    transition: ease 100ms;
+}
+
+.backimage:hover {
+    transform: scale(1.1);
+}
