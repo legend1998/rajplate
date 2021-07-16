@@ -25,7 +25,7 @@ function Header() {
                             HOME
                         </Link>
                         <Link
-                            to="about"
+                            to="#about"
                             class={
                                 location.pathname.includes("about")
                                     ? active
@@ -35,7 +35,7 @@ function Header() {
                             ABOUT
                         </Link>
                         <Link
-                            to="services"
+                            to="#services"
                             class={
                                 location.pathname.includes("services")
                                     ? active
@@ -75,7 +75,7 @@ function Header() {
                                 BOOK YOUR DIET PLAN
                             </Link>
                             <Link
-                                to="contact"
+                                to="#contact"
                                 class={
                                     location.pathname.includes("contact")
                                         ? active
@@ -128,7 +128,7 @@ function Header() {
                                     HOME
                                 </Link>
                                 <Link
-                                    to="about"
+                                    to="#about"
                                     class={
                                         location.pathname.includes("about")
                                             ? active
@@ -138,7 +138,7 @@ function Header() {
                                     ABOUT
                                 </Link>
                                 <Link
-                                    to="services"
+                                    to="#services"
                                     class={
                                         location.pathname.includes("services")
                                             ? active
@@ -168,7 +168,7 @@ function Header() {
                                     BOOK YOUR DIET PLAN
                                 </Link>
                                 <Link
-                                    to="contact"
+                                    to="#contact"
                                     class={
                                         location.pathname.includes("contact")
                                             ? active

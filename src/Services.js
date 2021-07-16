@@ -9,7 +9,7 @@ function Services() {
                 
                 m-2
                 shadow-md
-                backimage
+                wieght-loss
                 flex
                 justify-center
                 items-center
@@ -56,7 +56,7 @@ function Services() {
                
                 m-2
                 shadow-md
-                backimage
+                medical
                 flex
                 justify-center
                 items-center
@@ -82,7 +82,7 @@ function Services() {
                
                 m-2
                 shadow-md
-                backimage
+                keto
                 flex
                 justify-center
                 items-center

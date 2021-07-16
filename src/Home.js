@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "react-slideshow-image/dist/styles.css";
-import slide1 from "./images/slide1.jpg";
-import slide2 from "./images/slide2.jpg";
-import { Fade } from "react-slideshow-image";
 import { firestore } from "./firebaseconfig";
 import CountUp from "react-countup";
+import About from "./About";
+import Services from "./Services";
+import Contact from "./Contact";
 function Home() {
     const [info, setinfo] = useState(null);
 
@@ -19,21 +19,8 @@ function Home() {
             });
     }, []);
 
-    const images = [slide1, slide2];
     return (
         <div>
-            <Fade>
-                {images.map((each, index) => (
-                    <div className="w-full h-96 overflow-hidden">
-                        <img
-                            key={index}
-                            alt={`asdfasdfds${index}`}
-                            style={{ width: "100%" }}
-                            src={each}
-                        />
-                    </div>
-                ))}
-            </Fade>
             <div class="lg:p-5 flex flex-wrap items-center justify-center text-center">
                 <div
                     class="
@@ -59,7 +46,7 @@ function Home() {
                     h-44
                     m-2
                     shadow-md
-                    backimage
+                    wieght-loss
                     flex
                     justify-center
                     items-center
@@ -77,7 +64,7 @@ function Home() {
                     h-44
                     m-2
                     shadow-md
-                    backimage
+                    medical
                     flex
                     justify-center
                     items-center
@@ -95,7 +82,7 @@ function Home() {
                     h-44
                     m-2
                     shadow-md
-                    backimage
+                    keto
                     flex
                     justify-center
                     items-center
@@ -104,6 +91,78 @@ function Home() {
                 >
                     <span class="m-2 uppercase text-3xl text-white text-center">
                         KETO
+                    </span>
+                </div>
+                <div
+                    class="
+                    lg:w-72
+                    w-full
+                    h-44
+                    m-2
+                    shadow-md
+                    backimage
+                    flex
+                    justify-center
+                    items-center
+                    rounded
+                "
+                >
+                    <span class="m-2 uppercase text-3xl text-white text-center">
+                        Eating disorders
+                    </span>
+                </div>
+                <div
+                    class="
+                    lg:w-72
+                    w-full
+                    h-44
+                    m-2
+                    shadow-md
+                    backimage
+                    flex
+                    justify-center
+                    items-center
+                    rounded
+                "
+                >
+                    <span class="m-2 uppercase text-3xl text-white text-center">
+                        Eating disorders
+                    </span>
+                </div>
+                <div
+                    class="
+                    lg:w-72
+                    w-full
+                    h-44
+                    m-2
+                    shadow-md
+                    backimage
+                    flex
+                    justify-center
+                    items-center
+                    rounded
+                "
+                >
+                    <span class="m-2 uppercase text-3xl text-white text-center">
+                        Eating disorders
+                    </span>
+                </div>
+                <div
+                    class="
+                    lg:w-72
+                    w-full
+                    h-44
+                    m-2
+                    shadow-md
+                    backimage
+                    flex
+                    justify-center
+                    items-center
+                    rounded
+                "
+                >
+                    <span class="m-2 uppercase text-3xl text-white text-center">
+                        Eating disorders
                     </span>
                 </div>
             </div>
@@ -140,6 +199,25 @@ function Home() {
                     </div>
                 </div>
             ) : null}
+
+            <section>
+                <h1 className="text-5xl font-semibold text-center lg:py-10">
+                    ABOUT US
+                </h1>
+                <About />
+            </section>
+            <section>
+                <h1 className="text-5xl font-semibold text-center uppercase lg:py-10">
+                    services
+                </h1>
+                <Services />
+            </section>
+            <section>
+                <h1 className="text-5xl font-semibold text-center uppercase lg:py-10">
+                    contact us
+                </h1>
+                <Contact />
+            </section>
         </div>
     );
 }
